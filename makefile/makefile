@@ -19,3 +19,4 @@ a.out: ${obj}
 clean:
 	-rm -rf ${obj} a.out
 
+.PHONY:clean ALL
