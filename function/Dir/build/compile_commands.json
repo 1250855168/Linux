@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/linux/function/Dir/build",
+  "command": "/usr/bin/gcc  -I/home/linux/function/Dir/include  -g   -o CMakeFiles/Dir.dir/main.c.o   -c /home/linux/function/Dir/main.c",
+  "file": "/home/linux/function/Dir/main.c"
+},
+{
+  "directory": "/home/linux/function/Dir/build",
+  "command": "/usr/bin/gcc  -I/home/linux/function/Dir/include  -g   -o CMakeFiles/Dir_lib.dir/src/is_file.c.o   -c /home/linux/function/Dir/src/is_file.c",
+  "file": "/home/linux/function/Dir/src/is_file.c"
+},
+{
+  "directory": "/home/linux/function/Dir/build",
+  "command": "/usr/bin/gcc  -I/home/linux/function/Dir/include  -g   -o CMakeFiles/Dir_lib.dir/src/read_Dir.c.o   -c /home/linux/function/Dir/src/read_Dir.c",
+  "file": "/home/linux/function/Dir/src/read_Dir.c"
+}
+]

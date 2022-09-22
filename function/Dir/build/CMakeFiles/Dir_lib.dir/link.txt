@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDir_lib.a  CMakeFiles/Dir_lib.dir/src/is_file.c.o CMakeFiles/Dir_lib.dir/src/read_Dir.c.o
+/usr/bin/ranlib libDir_lib.a
