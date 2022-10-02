@@ -36,7 +36,7 @@ int main()
                 if (i == temp1 + temp2)
                 {
                     count++;
-                    temp1=temp2=0;
+                    temp1 = temp2 = 0;
                     break;
                 }
             }
