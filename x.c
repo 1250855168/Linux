@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 int isPrime(int k)
 {
     int j;
