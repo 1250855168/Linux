@@ -19,7 +19,7 @@ int main()
         if (pid == 0)
         {
             fd = open("B", O_RDWR);
-            printf("x:");
+            // printf("x:");
             fgets(buf, 1024, stdin);
             write(fd, buf, 1024);
         }
