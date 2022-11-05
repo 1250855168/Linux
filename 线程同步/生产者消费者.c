@@ -62,7 +62,7 @@ void *consumer(void *arg)
         Head = xxx->next;
         pthread_mutex_unlock(&mutex);
 
-        printf("--consumer data %d\n",xxx->data);
+        printf("--consumer %lu data %d\n",pthread_self(),xxx->data);
 
         free(xxx);
         xxx=NULL;
