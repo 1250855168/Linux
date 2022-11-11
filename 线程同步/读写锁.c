@@ -7,13 +7,14 @@ pthread_rwlock_t rwlock;
 
 void *th_write(void *arg)
 {
-    int t = (int)arg;
+    int t = (long)arg;
     while (1)
     {
         int temp = count;
         usleep(1000);
         pthread_rwlock_wrlock(&rwlock);
-        printf("write %d pro_count=%d cur_count=%d\n",t,count,++count);
+        int placeholder = ++count;
+        printf("write %d pro_count=%d cur_count=%d\n", t, count, placeholder);
         pthread_rwlock_unlock(&rwlock);
         usleep(9000);
     }
@@ -24,11 +25,12 @@ void *th_write(void *arg)
 
 void *th_read(void *arg)
 {
-    int t = (int)arg;
+    int t = (long)arg;
     while (1)
     {
         pthread_rwlock_wrlock(&rwlock);
-        printf("read %d pro_count=%d cur_count=%d\n",t,count,++count);
+        int placeholder = ++count;
+        printf("read %d pro_count=%d cur_count=%d\n", t, count, placeholder);
         pthread_rwlock_unlock(&rwlock);
         usleep(9000);
     }
@@ -37,7 +39,7 @@ void *th_read(void *arg)
 
 int main()
 {
-    int i;
+    long i;
     pthread_t tid[8];
     for (i = 0; i < 3; i++)
     {

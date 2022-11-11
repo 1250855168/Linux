@@ -6,7 +6,7 @@
 
 void *xxx(void *arg)
 {
-    int i = (int)arg;
+    int i = *(int*)arg;
     sleep(i);
     printf("I'm %dth thread pid = %d,tid = %lu\n",i+1,getpid(),pthread_self());
     pthread_exit((void*)0);
@@ -14,16 +14,15 @@ void *xxx(void *arg)
 
 int main()
 {
-    int i;
+    long i;
     int ret;
     pthread_t tid;
 
     for ( i = 0; i < 5; i++)
     {
-        ret = pthread_create(&tid,NULL,xxx,(void *)i);
-        if (ret!=0)
-        {
-            fprintf(stderr,"pthread_create error %s",strerror(ret));
+      ret = pthread_create(&tid, NULL, xxx, (void *)i);
+      if (ret != 0) {
+        fprintf(stderr, "pthread_create error %s", strerror(ret));
         }
     }
 

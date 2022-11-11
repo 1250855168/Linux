@@ -3,5 +3,6 @@
     "signal.h": "c",
     "types.h": "c"
   },
-  "C_Cpp.errorSquiggles": "Enabled"
+  "C_Cpp.errorSquiggles": "Enabled",
+  "cmake.sourceDirectory": "${workspaceFolder}/进程/function/Dir"
 }
