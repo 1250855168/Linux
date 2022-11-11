@@ -4,8 +4,8 @@
 #include <unistd.h>
 
 void *x(void *arg) {
-  int i = (long)arg;
-  printf("%d\n", i);
+  long i = (long)arg;
+  printf("%ld\n", i);
   return NULL;
 }
 
@@ -22,5 +22,6 @@ int main() {
 
   pthread_create(&xxx, NULL, x, (void*)g);
   sleep(1);
+  
   return 0;
 }
