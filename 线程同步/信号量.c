@@ -47,7 +47,7 @@ int main()
 {
     srand(time(NULL));
     pthread_t pid,cid;
-    sem_init(&blank_number, 0, NUM);
+    sem_init(&blank_number, 0, 5);
     sem_init(&product_number, 0, 0);
 
     pthread_create(&pid, NULL, producer, NULL);

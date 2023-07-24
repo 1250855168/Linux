@@ -14,7 +14,7 @@ struct Student
 void *xxx(void *arg)
 {
     struct Student *student;
-    student = malloc(sizeof(struct Student));
+    student = (struct Student *)malloc(sizeof(struct Student));
     student->age = 18;
     strcpy(student->name, "xxx");
     return (void *)student;

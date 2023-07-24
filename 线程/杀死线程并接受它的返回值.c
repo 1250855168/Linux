@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -13,8 +14,7 @@ struct Student
 
 void *xxx(void *arg)
 {
-    struct Student *student;
-    student = malloc(sizeof(struct Student));
+    struct Student *student = (struct Student *) malloc(24);
     student->age = 18;
     strcpy(student->name, "xxx");
     return (void *)student;

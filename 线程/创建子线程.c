@@ -6,9 +6,9 @@
 
 void *xxx(void *arg)
 {
-    int i = *(int*)arg;
+    long i = (long)arg;
     sleep(i);
-    printf("I'm %dth thread pid = %d,tid = %lu\n",i+1,getpid(),pthread_self());
+    printf("I'm %ldth thread pid = %d,tid = %lu\n",i+1,getpid(),pthread_self());
     pthread_exit((void*)0);
 }
 

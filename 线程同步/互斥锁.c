@@ -23,6 +23,7 @@ void *xxx(void *arg)
 
 int main()
 {
+    
     pthread_t tid;
     srand(time(NULL));
     int ret = pthread_mutex_init(&mutex, NULL);
@@ -33,7 +34,7 @@ int main()
     pthread_create(&tid, NULL, xxx, NULL);
     while (1)
     {
-        pthread_mutex_lock(&mutex);
+         pthread_mutex_lock(&mutex);
         printf("HELLO ");
         sleep(rand() % 3);
         printf("WORLD \n");

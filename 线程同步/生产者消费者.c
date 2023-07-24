@@ -29,7 +29,7 @@ void *producer(void *arg)
 {
     while (1)
     {
-        struct msg *xxx=malloc(sizeof(xxx));
+        struct msg *xxx=( struct msg *)malloc(sizeof(xxx));
         xxx->data = rand()%100+1;
         printf("producer data %d\n",xxx->data);
 
